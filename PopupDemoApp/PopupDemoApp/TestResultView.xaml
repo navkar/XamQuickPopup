@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<pages:PopupPage
+    x:Class="PopupDemoApp.TestResultView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+    CloseWhenBackgroundIsClicked="false"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8" />
+    </pages:PopupPage.Animation>
+    <StackLayout
+        Margin="6"
+        Padding="12"
+        BackgroundColor="WhiteSmoke"
+        HorizontalOptions="Center"
+        VerticalOptions="Center">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />                
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <StackLayout BackgroundColor="DarkSeaGreen" Grid.Column="0" Grid.Row="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Label HorizontalTextAlignment="Center" FontSize="45" FontAttributes="Bold" TextColor="White" Text="Correct" />
+            </StackLayout>
+
+            <Button Grid.Column="0" Grid.Row="1" Text="Review Answers" 
+                BackgroundColor="#A770EF" HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"
+                CornerRadius="20"
+                Clicked="Button_OnClicked"                    
+                TextColor="White" />
+            <Button Grid.Column="0" Grid.Row="2" Text="Next Question" 
+                BackgroundColor="#A770EF" HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"
+                TextColor="White"
+                Clicked="Button_OnClicked"                    
+                CornerRadius="20" />
+        </Grid>
+
+    </StackLayout>
+</pages:PopupPage>
