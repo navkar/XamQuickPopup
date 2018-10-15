@@ -5,4 +5,4 @@ Popup Demo in Xamarin Android
 
 | Popup Screenshot |
 | --- | 
-| ![Rg-popup](screenshots/pop-up.png?raw=true "Rg Popup") | 
+| ![Rg-popup](Screenshots/pop-up.png?raw=true "Rg Popup") | 
